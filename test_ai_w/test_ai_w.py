@@ -13,7 +13,7 @@ class WeatherBot:
             if response.status_code == 200:
                 weather_description = data['weather'][0]['description']
                 temperature = data['main']['temp']
-                return f"Weather in {city.capitalize()}: {weather_description.capitalize()}. Temperature: {temperature}°C."
+                return f"Weather in {city.capitalize()}: {weather_description.capitalize()}. Temperature: {temperature} C."
             else:
                 return "Failed to retrieve weather data. Please try again later."
         except Exception as e:
